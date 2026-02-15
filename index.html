@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GaonMart Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+<div class="login-container">
+
+<h1 class="brand">🛒 GaonMart</h1>
+<p class="tagline">Fresh groceries delivered fast</p>
+
+<div class="login-card">
+<input type="text" id="username" placeholder="Enter your name">
+<input type="text" id="phone" placeholder="Mobile number">
+<input type="text" id="address" placeholder="address">
+
+<button onclick="login()">Continue</button>
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let name = document.getElementById("username").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+
+if(!name || !phone || !address){
+alert("Please fill all fields");
+return;
+}
+
+localStorage.setItem("user", JSON.stringify({
+  name: name,
+  phone: phone,
+  address: address
+}));
+
+window.location.href = "home.html";
+}
+
+</script>
+
+</body>
+</html>

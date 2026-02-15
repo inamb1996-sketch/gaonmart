@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GaonMart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="premium-header">
+<div class="logo">🛒 GaonMart</div>
+
+<input type="text" id="search" placeholder="Search products...">
+
+<div class="cart-area" onclick="goCart()">
+🛍 Cart (<span id="cart-count">0</span>)
+</div>
+</header>
+
+
+
+
+<div class="main">
+
+<div class="sidebar">
+<ul id="categoryList"></ul>
+</div>
+
+<div class="content">
+<div id="productGrid" class="grid"></div>
+</div>
+
+</div>
+
+<!-- Marketing Slider -->
+<div class="marketing-slider">
+  <img id="sliderImage" src="images/banner1.jpg" alt="Offer Banner">
+</div>
+<div id="cartPanel" class="cart-panel">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<span class="close-btn" onclick="goCart()">← Back</span>
+</div>
+
+
+<div id="cartItems" class="cart-items"></div>
+<button class="clear-cart-btn" onclick="clearCart()">Empty Cart</button>
+
+<div class="cart-summary">
+<div class="row">
+<span>Subtotal</span>
+<span>₹<span id="subtotal">0</span></span>
+</div>
+
+<div class="row">
+<span>Delivery</span>
+<span>₹<span id="delivery">0</span></span>
+</div>
+
+<div class="row total-row">
+<span>Total</span>
+<span>₹<span id="total">0</span></span>
+</div>
+
+<button class="checkout-btn" onclick="checkout()">Place Order</button>
+</div>
+
+</div>
+
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+<!-- ORDER CONFIRMATION MODAL -->
+<div id="addressModal" class="modal">
+  <div class="modal-content">
+    <h3>Confirm Your Order</h3>
+
+    <p id="orderSummaryText"></p>
+
+    <div class="modal-buttons">
+      <button onclick="closeModal()" class="cancel-btn">Back</button>
+      <button onclick="confirmOrder()" class="confirm-btn">Confirm Order</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
