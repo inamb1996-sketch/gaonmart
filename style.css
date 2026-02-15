@@ -541,34 +541,67 @@ border-radius:8px;
 
 @media (max-width: 768px) {
 
+/* Hide Sidebar */
+.sidebar {
+    display: none;
+}
+
+.main {
+    display: block;
+}
+
+.content {
+    width: 100%;
+}
+
+/* Grid Layout */
 .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 12px;
 }
 
+/* Card Styling */
 .card {
-    padding: 15px;
+    padding: 12px;
+    border-radius: 14px;
 }
 
+/* Product Image */
 .product-img img {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: contain;
 }
 
+/* Quantity Control Horizontal */
+.qty-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
 .qty-control button {
-    padding: 10px 14px;
-    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 0;
 }
 
 .qty-control span {
     font-size: 16px;
-    margin: 0 6px;
+    min-width: 20px;
+    text-align: center;
 }
 
+/* Add to Cart Button */
 .add-btn {
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 8px;
 }
 
 }
+
